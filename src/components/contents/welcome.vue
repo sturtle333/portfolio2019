@@ -85,16 +85,21 @@ export default {
 }
 
 
-@media(max-width:1000px){
+@media(max-width:1100px){
   .welcome-header {
-  margin-top: 100px;
+    margin-top: 100px;
     text-align: left;
   }
   .title {
     font-size: 3em;
   }
   .subtitle {
-    font-size: 1em;
+    font-size: 3em;
+  }
+
+
+  .welcome-content {
+    margin-bottom: 25%;
   }
 }
 
@@ -103,8 +108,6 @@ export default {
   .welcome-header {
     margin: 0;
     margin-bottom: 1em;
-    font-family: 'Inconsolate', sans-serif;
-    letter-spacing: 5px;
     line-height: 2em;
   }
   .title {
@@ -126,6 +129,37 @@ export default {
     font-size: 0.5em;
   }
 
+  .welcome-content div {
+    width: 40%;
+    height: 25%;
+  }
+}
+
+@media(max-width:400px){
+  .welcome-header {
+    margin: 0;
+    margin-bottom: 1em;
+    letter-spacing: 5px;
+    line-height: 2em;
+  }
+  .title {
+    display: inline;
+    font-size: 1em;
+    margin: 0;
+  }
+  .title span {
+    display: block;
+    vertical-align: baseline;
+  }
+  .subtitle {
+    font-size: 1em;
+    margin: 0;
+  }
+
+
+  .content-description {
+    font-size: 0.5em;
+  }
 
   .welcome-content div {
     width: 40%;

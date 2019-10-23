@@ -2,7 +2,7 @@
 <div class="nav-header-container" :style="{ 'background-color': Color, color: Color }">
   <div class="nav-header">
     <button :class="{'nav-activated': pg===0}" @click="setPage(0);"><span class="nav-emoji">👋</span><br>Welcome</button>
-    <button :class="{'nav-activated': pg===1}" @click="setPage(1);"><span class="nav-emoji">📋</span><br>Information</button>
+    <button :class="{'nav-activated': pg===1}" @click="setPage(1);"><span class="nav-emoji">📋</span><br>About</button>
     <button :class="{'nav-activated': pg===2}" @click="setPage(2);"><span class="nav-emoji">📚</span><br>Stack</button>
     <button :class="{'nav-activated': pg===3}" @click="setPage(3);"><span class="nav-emoji">🏆</span><br>Portfolio</button>
   </div>

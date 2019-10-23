@@ -5,7 +5,7 @@
   </div>
   <div class="container-contents">
     <main-contents-welcome class="pages" :class="[{ 'component-actived': page===0 },{'component-not-actived': page!==0}]" />
-    <main-contents-information class="pages" :class="[{ 'component-actived': page===1 },{'component-not-actived': page!==1}]" />
+    <main-contents-about class="pages" :class="[{ 'component-actived': page===1 },{'component-not-actived': page!==1}]" />
   </div>
 </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 import Navigation from './interface/nav.vue'
 import Welcome from './contents/welcome.vue'
-import Information from './contents/information.vue'
+import About from './contents/about.vue'
 
 export default {
   name: 'mainPage',
@@ -30,7 +30,7 @@ export default {
   components: {
     'main-nav': Navigation,
     'main-contents-welcome': Welcome,
-    'main-contents-information': Information
+    'main-contents-about': About
   }
 }
 </script>

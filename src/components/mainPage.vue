@@ -55,7 +55,7 @@ export default {
 }
 
 .component-not-actived {
-  transition: opacity 1s, visibility 0s 1s, height 0s 1s, flex 0s 1s, padding 0s 1s, align-self 0s 1s;
+  transition: opacity 1s, visibility 0s 1s, height 0s 1s, flex 0s 1s, padding 0s 1s, align-self 0s 1s, overflow 0s 1s;
   visibility:hidden;
   opacity: 0;
   flex: initial;
@@ -64,9 +64,10 @@ export default {
   pointer-events: none;
 }
 .component-actived {
-  transition: opacity 1s 1s, visibility 0s 1s, flex 0s 1s, padding 0s 1s;
-  visibility:visible;
+  transition: opacity 1s 1s, visibility 0s 1s, height 0s 1s, flex 0s 1s, padding 0s 1s, align-self 0s 1s, overflow 0s 1s;
+  visibility: visible;
   align-self: stretch;
+  flex: 1;
   opacity: 1;
   padding: 5%;
 }

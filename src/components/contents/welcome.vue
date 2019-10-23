@@ -6,7 +6,7 @@
         <span>Hello, World!</span>
         <span style="font-size: 1.5em; color: white;"> } </span>
       </p>
-      <p class="subtitle">portfolio</p>
+      <p class="subtitle">Developer portfolio</p>
     </div>
     <span class="content-description">Resently</span>
     <div class="welcome-content">
@@ -30,8 +30,6 @@ export default {
 .contents-container-welcome{
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin: 0;
   background-color: #e4e7ec;
   color: #263959;
   overflow: hidden;

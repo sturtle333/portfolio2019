@@ -6,6 +6,10 @@
   </div>
   <div class="about-content">
     <div class="about-desc">
+      <p style="justify-self: flex-start; font-size: 3em;">
+        potentiality
+      </p>
+
       <item-info>
         <template #icon>📑</template>
         <template #desc>PARK JUNGHO (박정호)</template>
@@ -69,6 +73,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-around;
+  align-self: stretch;
 }
 .about-selfy {
   width: 40%;

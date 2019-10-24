@@ -4,49 +4,45 @@
     <p style="margin: 0; text-align: left; font-size: 3em;">About.</p>
     <hr style="border: 2px solid #54546c;">
   </div>
-  <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; flex: 1;">
+  <div class="about-content">
     <div class="about-desc">
-      <div>
-        <div>
-          <div class="about-emoji"><span>📑</span></div>
-          <span class="about-info">PARK JUNGHO (박정호)</span>
-        </div>
-        <div>
-          <div class="about-emoji"><span>🎂</span></div>
-          <span class="about-info">December, 1st, 2001 (2001.12.01)</span>
-        </div>
-        <div>
-          <div class="about-emoji"><span>📧</span></div>
-          <span class="about-info">sturtle333@gmail.com</span>
-        </div>
-        <div>
-          <div class="about-emoji"><span>📱</span></div>
-          <span class="about-info">010-8780-0934</span>
-        </div>
-        <p>if you want view more private information, contact me</p>
-      </div>
+      <item-info>
+        <template #icon>📑</template>
+        <template #desc>PARK JUNGHO (박정호)</template>
+      </item-info>
+
+      <item-info>
+        <template #icon> 🎂</template>
+        <template #desc> December, 1st, 2001</template>
+      </item-info>
+
+      <item-info>
+        <template #icon> 📧</template>
+        <template #desc>sturtle333@gmail.com</template>
+      </item-info>
+
+      <item-info>
+        <template #icon> 📱</template>
+        <template #desc>010-8780-0934</template>
+      </item-info>
     </div>
-    <div class="about-pic">
-      <img class="selfy" src="../../assets/selfy.png" alt="myPicture" />
-    </div>
+    <img class="about-selfy" src="../../assets/selfy.png" alt="myPicture" />
   </div>
 </div>
 </template>
 
 <script>
+import INFO from './about/info.vue'
+
 export default {
-  name:'about'
+  name:'about',
+  components: {
+    'item-info': INFO
+  }
 }
 </script>
 
 <style>
-.contents-container-about div {
-  display: inline-block;
-}
-.contents-container-about span {
-  display: inline-block;
-}
-
 .contents-container-about {
   display: flex;
   flex-direction: column;
@@ -59,64 +55,30 @@ export default {
 
   overflow: hidden;
 }
-.contents-container-about .about-desc {
+
+.about-content {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-desc {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1 0;
+  align-items: flex-start;
 }
-.contents-container-about .about-pic {
-  display: flex;
-  flex-direction: center;
-  flex: 1 1;
-  justify-content: flex-end;
-}
-.selfy {
-  float: right;
-  width: 70%;
+.about-selfy {
+  width: 40%;
   padding: 20px;
   background-color: white;
 }
 
 
-.contents-container-about .about-desc > div > div {
-  display: flex;
-  flex-directiom: row;
-  align-items: center;
-  align-self: flex-start;
-
-  margin-bottom: 1em;
-}
-
-.contents-container-about .about-desc > div > div:hover {
-  color: white;
-  border-radius: 30px;
-  background-color: #54546c;
-}
-
-
-.contents-container-about .about-desc * {
-  display: inline-block;
-  font-size: 1.2em;
-}
-
-
 .about-info {
-  margin-left: 2em;
-}
-
-
-.about-emoji {
-  text-align: center;
-  vertical-align: middle;
-
-  border-radius: 30px;
-  padding: 10px;
-
-  background-color: #54546c;
-}
-.about-emoji>span{
-  width: 1.3em;
-  text-align: center;
+  margin-left: 1.5em;
+  padding-right: 1.5em;
 }
 </style>
